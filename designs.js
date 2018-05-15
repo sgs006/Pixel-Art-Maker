@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // Select color input
 const color = $('#colorPicker');
 const table = $('#pixelCanvas');
@@ -37,3 +38,4 @@ $("table").on("mousemove mouseenter mouseleave mouseover", "td", function(e) {
       $(this).css("background-color", background);
     }
   });
+});
