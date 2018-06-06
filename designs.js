@@ -15,12 +15,15 @@ $('#submit').on('click', function makeGrid(event) {
   table.children().remove();//clear grid and restart
   let rows = height.val();
   let cols = width.val();
+  makeGrid();
+  function makeGrid() {
   for (let m = 0; m < rows; m++){
-    table.append('<tr></tr>');
+    $(table.append('<tr></tr>'));
   }
    for(let n = 0; n < cols; n++){
     $('table tr').append('<td class="box"></td>');
   }
+ }   
 });
 
 table.on('click', '.box', function(){
