@@ -25,17 +25,35 @@ $('#submit').on('click', function makeGrid(event) {
 
 table.on('click', '.box', function(){
   let background = color.val();
-  if( $(this).css("background-color") === 'rgba(0, 0, 0, 0)' ||       $(this).css("background-color") === 'transparent'){
+  if( $(this).css("background-color") === 'rgba(0, 0, 0, 0)' || $(this).css("background-color") === 'transparent'){
      $(this).css('background-color', background);
-  }else{
-     $(this).css('background-color', 'transparent');
   }
+   dragColor();
 });
 
-$("table").on("mousemove mouseenter mouseleave mouseover", "td", function(e) {
-    if (e.which === 1) {
-      let background = color.val();
+function dragColor() {
+  let background = color.val();
+  $("table").on("mousedown", ".box", function() {
+    mouseDown = true;
+  });
+
+  $(document).mouseup(function() {
+    mouseDown = false;
+  });
+
+  $("table").on("mousemove", "td", function() {
+    if (mouseDown) {
       $(this).css("background-color", background);
     }
   });
+}
+
+$("table").on("dblclick", ".box", function(e) {
+  if (e.which === 1) {
+    $(this).css("background-color", "transparent");
+  }
+});
+
+  
+  
 });
