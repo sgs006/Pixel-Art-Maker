@@ -44,3 +44,55 @@ input[type=number] {
 .box {
   border-color: white;
 }
+
+.modal { 
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 25%;
+  width: 60%;
+  border: 2px solid black;
+  background-color: green;
+  list-style-position: inside;
+  font-size: 18px;
+ 
+}
+
+.close{
+  float: right;
+  margin:10px 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+ul{
+  width: 35%;
+  margin:0 auto;
+  text-align:left;
+  margin-bottom: 20px;
+}
+
+li{
+  margin:  .2em .1em;
+}
+
+.btn {
+  margin-top: 1em;
+  color: white;
+  background-color: #42b0f4;
+  width: 110px;
+  height: 25px;
+  font-size:1em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
