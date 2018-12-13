@@ -19,4 +19,4 @@ Project is created with:
 * jQuery
 	
 ## Setup
-To see this project click here: 'Coming Soon'
+To see this project click here: https://sgs006.github.io/pixel-art-maker/
