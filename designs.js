@@ -53,7 +53,18 @@ $("table").on("dblclick", ".box", function(e) {
     $(this).css("background-color", "transparent");
   }
 });
-
-  
-  
 });
+
+//modal display
+const modal =$("#grab");
+const close = $(".close");
+const btn = $(".btn");
+
+btn.on("click", function(){
+  modal.removeClass('hide');
+})
+
+close.on("click", function(){
+  modal.addClass('hide');
+})
+
